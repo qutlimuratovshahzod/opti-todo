@@ -10,12 +10,13 @@ function App() {
       <div>
       <Navbar/>
       </div>
-      <TodoList/>
-      <div>
+      <div className="flex justify-center items-center">
         <Routes>
           <Route index element={<Home/>} />
           <Route path="/about" element={<About/>} />
         </Routes>
+      </div>
+      <div className="">
       </div>
     </div>
   );
