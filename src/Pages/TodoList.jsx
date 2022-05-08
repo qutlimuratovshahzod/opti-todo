@@ -5,6 +5,8 @@ import {RiDeleteBin5Line} from "react-icons/ri"
 export const TodoList = () => {
     const { todos } = useSelector(state => state)
     const dispatch = useDispatch()
+   
+
     return (
         <ul className=' w-96 p-9 m-auto'>
             {todos.map((todo, index) => {
@@ -16,7 +18,7 @@ export const TodoList = () => {
                         </h1>
                         <span className=''>
                             <input onChange={() => dispatch(toggleTodo(todo.id))} type="checkbox" checked={todo.completed} className="checkbox p-2.5" />
-                            <button className='btn btn-lg btn-ghost' onClick={() => dispatch(deleteTodo(todo.id))}><RiDeleteBin5Line/></button>
+                            <button  className='btn btn-lg btn-ghost' onClick={() => dispatch(deleteTodo(todo.id))}><RiDeleteBin5Line/></button>
                         </span>
                         </div>
                     </li>
